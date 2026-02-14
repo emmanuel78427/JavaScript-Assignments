@@ -26,10 +26,23 @@
 */
 
 function countVowels(str) {
-  // Your code here
+   let result = 0;
+   const vowels = "aeiouAEIOU";
+   for (let i = 0; i< str.length; i++) {
+   let char = str[i];
+
+   if (vowels.includes(char)){
+     result++
+   }
+
+    }
+   
+   return result
 }
 
 module.exports = { countVowels };
+
+console.log(countVowels("EmmanuelEmmanuelEmmanuel"))
 
 
 
