@@ -20,16 +20,23 @@
 
 
 function countOccurrences(arr) {
-  const result = {};
-
-  for (const value of arr) {
-    result[value] = (result[value] || 0) + 1;
-  }
-
-  return result;
+   const result = {};
+   for (let i =0 ; i < arr.length; i++) {
+      let num = arr[i]
+      if(result[num]) {
+        result[num]++
+      } else {
+        result[num] = 1 ;
+      }
+}
+return result;
 }
 
 module.exports = countOccurrences;
+
+let arr1 = [1,2,3,1,2,3,1,2,3,4,3,"hi","hi"]
+let x = countOccurrences(arr1)
+console.log(x)
 
 
 
