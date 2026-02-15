@@ -22,7 +22,19 @@
 */
 
 function reverseInteger(num) {
-  // Your code here
+   let isNegative = num<0
+  let numTostr = Math.abs(num).toString()
+  let strrev = "";
+  for ( let i = numTostr.length-1; i>=0;i--) {
+    strrev += numTostr[i]
+  }
+  let result = parseInt(strrev);
+  return isNegative ? -result : result ;
 }
 
 module.exports = reverseInteger;
+
+console.log(reverseInteger(-12345))
+console.log(reverseInteger(987654321))
+console.log(reverseInteger(-89))
+
