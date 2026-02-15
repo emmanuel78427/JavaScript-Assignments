@@ -18,12 +18,16 @@
   - `npm run test-reverseString`
 */
 
-function reverseString(str) {
-  let reversed = '';
-  for(let i = str.length-1; i>=0; i--) {
-    reversed += str[i];
+function reve(str) {
+  let rev = ""
+  for ( let i = str.length-1; i>=0; i--) {
+    rev += str[i]
   }
-  return reversed;
+  return rev;
 }
 
-module.exports = reverseString;
+module.exports = reve;
+
+console.log(reve("Hello how are you doing"))
+
+
