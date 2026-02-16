@@ -15,8 +15,29 @@
   - `npm run test-prime`
 */
 
+
+
+
+
+
+
 function getPrimesUpTo100() {
-  // Your code here
+  let PrimeNo = []
+  for (let i = 2; i<=100; i++){
+    let ItIsPrime = true;
+    for ( let j = 2; j<i; j++){
+      if (i%j===0){
+        ItIsPrime = false;
+        break;
+      }
+      }
+       if(ItIsPrime){
+        PrimeNo.push(i)
+    }
+  }
+  return PrimeNo;
 }
 
-module.exports = { getPrimesUpTo100 };
+console.log(getPrimesUpTo100())
+
+module.exports ={ getPrimesUpTo100 };
