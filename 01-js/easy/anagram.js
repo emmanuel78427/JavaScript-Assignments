@@ -6,19 +6,18 @@
   Once you've implemented the logic, test your code by running
   - `npm run test-anagram`
 */
-function isAnagram(str1, str2) {
 
-  if (str1.length !== str2.length) {
-      return false;
+function isAnagram (str1,str2) {
+  if (str1.length !== str2.length ) return false;
+   
+  function sortthestring(str) {
+    return str.toLowerCase().split('').sort().join('')
   }
-
-
-  function sortString(str) {
-      return str.toLowerCase().split('').sort().join('');
-  }
-
-
-  return sortString(str1) === sortString(str2);
+  return sortthestring(str1) === sortthestring(str2);
 }
 
-module.exports = isAnagram;
+module.exports = isAnagram ;
+
+console.log(isAnagram("listen","silent"));
+console.log(isAnagram("piano","ianpo"))
+
