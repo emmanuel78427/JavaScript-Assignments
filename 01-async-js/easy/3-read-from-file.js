@@ -5,3 +5,18 @@
 // Try to do an expensive operation below the file read and see how it affects the output. 
 // Make the expensive operation more and more expensive and see how it affects the output. 
 
+const fs = require("fs");
+
+fs.readFile("example.txt", "utf-8", function(err,data) {
+  
+   
+    console.log("File content:", data)
+});
+
+ for(let i = 0; i<10900; i++) {
+    console.log("hi")
+ }
+ console.log("loop going to finish")
+ console.log("loop finished")
+ console.log("now we are going to see callbacks")
+ 
